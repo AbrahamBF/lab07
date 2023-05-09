@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Laboratorio 07</title>
+</head>
+<body>
+	<header>
+		<h1>¡Bienvenido a mi biblioteca!</h1>
+	</header>
+
+	<main>
+		<section>
+			<h2>Agregar autor</h2>
+			<form action="Autor/agregar_autor.php" method="post">
+				<label for="nombre_autor">Nombre del autor:</label>
+				<input type="text" id="nombre_autor" name="nombre_autor" required>
+				<button type="submit">Agregar autor</button>
+			</form>
+		</section>
+
+		<section>
+			<h2>Agregar libro</h2>
+			<form action="Libro/agregar_libro.php" method="post">
+				<label for="titulo_libro">Título del libro:</label>
+				<input type="text" id="titulo_libro" name="titulo_libro" required>
+				<label for="año_libro">Año de publicación:</label>
+				<input type="number" id="año_libro" name="año_libro" required>
+				<label for="autor_libro">Autor:</label>
+				<select id="autor_libro" name="autor_libro" required>
+					<option value="" disabled selected>Selecciona un autor</option>
+                    <option>Mario Vargas Llosa</option>
+                    <option>César Vallejo</option>
+                    <option>Ricardo Palma</option>
+					<!-- Aquí se pueden agregar opciones para cada autor -->
+				</select>
+				<button type="submit">Agregar libro</button>
+			</form>
+		</section>
+
+		<section>
+			<h2>Lista de autores</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Mario Vargas Llosa</td>
+						<td>
+							<a href="Autor/editar_autor.php?id=1">Editar</a>
+							<a href="Autor/eliminar_autor.php?id=1">Borrar</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>César Vallejo</td>
+						<td>
+							<a href="Autor/editar_autor.php?id=2">Editar</a>
+							<a href="Autor/eliminar_autor.php?id=2">Borrar</a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Ricardo Palma</td>
+						<td>
+							<a href="Autor/editar_autor.php?id=3">Editar</a>
+							<a href="Autor/eliminar_autor.php?id=3">Borrar</a>
+						</td>
+					</tr>
+					<!-- Aquí se pueden agregar filas para cada autor -->
+				</tbody>
+			</table>
+		</section>
+
+		<section>
+			<h2>Lista de libros</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Título</th>
+						<th>Año de publicación</th>
+						<th>Autor</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>La ciudad y los perros</td>
+						<td>1963</td>
+						<td>Mario Vargas Llosa</td>
+						<td>
+							<a href="Libro/editar_libro.php?id=1">Editar</a>
+							<a href="Libro/eliminar_libro.php?id=1">Borrar</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Los heraldos negros</td>
+						<td>1918</td>
+						<td>César Vallejo</td>
+						<td>
+							<a href="Libro/editar_libro.php?id=2">Editar</a>
+							<a href="Libro/eliminar_libro.php?id=2">Borrar</a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Peruvian Traditions</td>
+						<td>1872</td>
+						<td>Ricardo Palma</td>
+						<td>
+							<a href="Libro/editar_libro.php?id=3">Editar</a>
+							<a href="Libro/eliminar_libro.php?id=3">Borrar</a>
+						</td>
+					</tr>
+					<!-- Aquí se pueden agregar filas para cada libro -->
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<footer>
+		<p>Desarrollado por Abraham Balboa Fuentes</p>
+	</footer>
+</body>
+</html>
